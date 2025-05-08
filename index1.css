@@ -1,0 +1,194 @@
+/* Main container styling */
+.main {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 90%;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+/* Left section */
+.left {
+    width: 150px;
+    border: 5px solid #FF6347; /* Tomato color */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Middle section */
+.middle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Boxes in the middle section */
+.box1, .box2, .box6 {
+    width: 100%;
+    border: 5px solid #4682B4; /* SteelBlue color */
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Second row styling in the middle section */
+.second {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Increased gap for better spacing */
+    justify-content: space-between;
+}
+
+/* Boxes in the second row */
+.box2 {
+    flex: 1 1 calc(33.333% - 10px);
+    max-width: calc(33.333% - 10px);
+    border: 5px solid #32CD32; /* LimeGreen color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Third section layout */
+.third {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Box 3_1 */
+.box3_1 {
+    flex: 2;
+    border: 5px solid #FFD700; /* Gold color */
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+/* Box 3_2 */
+.box3_2 {
+    flex: 1;
+    border: 5px solid #8A2BE2; /* BlueViolet color */
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+/* Right section */
+.right {
+    width: 150px;
+    border: 5px solid #FF4500; /* OrangeRed color */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* General text alignment */
+.text {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Image section */
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    gap: 10px;
+}
+
+/* Form styling */
+form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px; /* Adjusted padding for a cleaner look */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Form inputs and labels */
+label {
+    display: block;
+    margin-bottom: 6px; /* Adjusted margin for better spacing */
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px; /* Slightly increased padding for better usability */
+    margin-bottom: 10px; /* Adjusted margin for uniformity */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Submit button */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Scrollable book list container */
+.book-list-container {
+    max-height: 300px;
+    overflow-y: scroll;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .second .box2 {
+        flex: 1 1 100%;
+    }
+
+    .third {
+        flex-direction: column;
+    }
+
+    .box3_1, .box3_2 {
+        flex: 1 1 100%;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+}
